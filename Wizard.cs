@@ -1,45 +1,48 @@
 using Godot;
-using System;
 
 public class Wizard : KinematicBody2D
 {
-    private enum State
-    {
-        IDLE = 0,
-        RUN = 1,
-        Attack = 2
-    }
     private Vector2 _velocity = new Vector2();
     private const int MOVE_SPEED = 200;
-    private AnimatedSprite _animatedSprite;
+    private AnimationPlayer _animationPlayer;
+    private AnimationTree _animationTree;
+    private AnimationNodeStateMachinePlayback _stateMachine;
+    private Sprite _playerSprite;
+
 
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
     {
-        _animatedSprite = GetNode<AnimatedSprite>("AnimatedSprite");
+        _playerSprite = GetNode<Sprite>("Sprite");
+        _animationPlayer = GetNode<AnimationPlayer>("AnimationPlayer");
+        _animationTree = GetNode<AnimationTree>("AnimationTree");
+        _stateMachine = (AnimationNodeStateMachinePlayback)_animationTree.Get("parameters/playback");
+        _animationTree.Active = true;
+        _stateMachine.Start("idle");
     }
 
     // Called every frame. 'delta' is the elapsed time since the previous frame.
     public override void _Process(float delta)
     {
 
-
-        // if (shouldAttach)
-        // {
-        //     _animatedSprite.Play("attack");
-        // }
-        // else
-        // {
-        if (_velocity.Length() > 0)
+        if (Input.IsActionJustPressed("attack"))
         {
-            _animatedSprite.Play("run");
-            _animatedSprite.FlipH = _velocity.x < 0;
+            _animationPlayer.Play("attack");
         }
         else
         {
-            _animatedSprite.Play("idle");
+            if (_animationPlayer.IsPlaying())
+                return;
+            if (_velocity.Length() > 0)
+            {
+                _stateMachine.Travel("run");
+                _playerSprite.FlipH = _velocity.x < 0;
+            }
+            else
+            {
+                _stateMachine.Travel("idle");
+            }
         }
-        // }
 
     }
 
