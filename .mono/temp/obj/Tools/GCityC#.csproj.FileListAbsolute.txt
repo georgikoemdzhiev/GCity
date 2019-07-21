@@ -4,3 +4,9 @@ D:\Development\Godot\GCityC#\.mono\temp\obj\Tools\GCityC#.csprojAssemblyReferenc
 D:\Development\Godot\GCityC#\.mono\temp\obj\Tools\GCityC#.csproj.CoreCompileInputs.cache
 D:\Development\Godot\GCityC#\.mono\temp\obj\Tools\GCityC#.dll
 D:\Development\Godot\GCityC#\.mono\temp\obj\Tools\GCityC#.pdb
+D:\Code\GCity\.mono\temp\bin\Tools\GCityC#.dll
+D:\Code\GCity\.mono\temp\bin\Tools\GCityC#.pdb
+D:\Code\GCity\.mono\temp\obj\Tools\GCityC#.csprojAssemblyReference.cache
+D:\Code\GCity\.mono\temp\obj\Tools\GCityC#.csproj.CoreCompileInputs.cache
+D:\Code\GCity\.mono\temp\obj\Tools\GCityC#.dll
+D:\Code\GCity\.mono\temp\obj\Tools\GCityC#.pdb

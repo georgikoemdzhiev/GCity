@@ -3,7 +3,7 @@ using Godot;
 public class Wizard : KinematicBody2D
 {
     private Vector2 _velocity = new Vector2();
-    private const int MOVE_SPEED = 200;
+    private const int MOVE_SPEED = 500;
     private AnimationPlayer _animationPlayer;
     private AnimationTree _animationTree;
     private AnimationNodeStateMachinePlayback _stateMachine;
