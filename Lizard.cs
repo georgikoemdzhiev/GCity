@@ -14,7 +14,7 @@ public class Lizard : KinematicBody2D
 {
     private Random _random = new Random();
     private EnemyState _state = EnemyState.NewDirection;
-    private const int MoveSpeed = 100;
+    private const int MoveSpeed = 50;
     private Vector2 _direction = Vector2.Right;
     private AnimatedSprite _animatedSprite;
     private Timer _timer;
