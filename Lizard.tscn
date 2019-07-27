@@ -51,7 +51,7 @@ position = Vector2( 0, 3 )
 scale = Vector2( 3, 3 )
 frames = SubResource( 1 )
 animation = "attack"
-frame = 1
+frame = 2
 playing = true
 offset = Vector2( 2, -3 )
 

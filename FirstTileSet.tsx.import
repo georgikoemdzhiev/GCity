@@ -1,0 +1,20 @@
+[remap]
+
+importer="vnen.tiled_tileset_importer"
+type="TileSet"
+path="res://.import/FirstTileSet.tsx-21f8b0039c020e4b92e8389105a3fff0.res"
+
+[deps]
+
+source_file="res://FirstTileSet.tsx"
+dest_files=[ "res://.import/FirstTileSet.tsx-21f8b0039c020e4b92e8389105a3fff0.res" ]
+
+[params]
+
+custom_properties=true
+tile_metadata=false
+image_flags=7
+embed_internal_images=false
+save_tiled_properties=false
+apply_offset=false
+post_import_script=""

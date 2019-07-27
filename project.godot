@@ -19,6 +19,10 @@ config/name="GCityC#"
 run/main_scene="res://Main.tscn"
 config/icon="res://icon.png"
 
+[editor_plugins]
+
+enabled=PoolStringArray( "vnen.tiled_importer" )
+
 [importer_defaults]
 
 texture={
@@ -74,3 +78,7 @@ attack={
 
 quality/2d/use_pixel_snap=true
 environment/default_environment="res://default_env.tres"
+
+[tiled_importer]
+
+enable_json_format=true
